@@ -1,0 +1,25 @@
+
+http://localhost:3000/about.html
+
+http://localhost:3000/help.html
+
+
+
+dynamic page with templating
+
+npm packages handlerbars
+
+npm package for express -> hbs(handlerbars with express)
+
+app.set('view engine', 'hbs');
+
+app.get('', (req, res) => {
+    // render allows us to render view(handlebars template)
+    res.render('index', { title: 'Weather App', name: 'Tarang Sachdev' })
+})
+
+// express expect 'views' folder default for hbs template
+if we want to customize that we need to inform express some way so that our app understand from where to load the hbs file
+
+const viewsPath = path.join(__dirname, '../templates');
+app.set('views', viewsPath);
