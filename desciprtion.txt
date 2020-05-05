@@ -21,5 +21,7 @@ app.get('', (req, res) => {
 // express expect 'views' folder default for hbs template
 if we want to customize that we need to inform express some way so that our app understand from where to load the hbs file
 
-const viewsPath = path.join(__dirname, '../templates');
+const viewsPath = path.join(__dirname, '../templates/views');
 app.set('views', viewsPath);
+
+you can remove views folder from the main path
