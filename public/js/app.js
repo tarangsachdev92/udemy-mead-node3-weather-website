@@ -18,6 +18,7 @@ weatherForm.addEventListener('submit', (event) => {
     messageOne.textContent = 'Loading...';
     messageTwo.textContent = '';
 
+    // when deploy to heroku => remove domain 
     // fetch('http://localhost:3000/weather?address=' + location).then((response => {
     fetch('/weather?address=' + location).then((response => {
         response.json().then((data) => {
